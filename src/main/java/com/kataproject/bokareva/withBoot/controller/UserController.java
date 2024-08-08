@@ -42,8 +42,7 @@ public class UserController {
         if (userOptional.isPresent()) {
             model.addAttribute("user", userOptional.get());
         } else {
-            // Обработка ситуации, когда пользователь не найден (например, редирект на страницу ошибки)
-            return "redirect:/users";  // или на страницу с ошибкой
+            return "redirect:/users";
         }
 
         return "showUser";
@@ -76,7 +75,7 @@ public class UserController {
         if (userOptional.isPresent()) {
             model.addAttribute("user", userOptional.get());
         } else {
-            return "redirect:/users";  // или на страницу с ошибкой
+            return "redirect:/users";
         }
 
         return "edit";
@@ -91,7 +90,7 @@ public class UserController {
         if (userOptional.isPresent()) {
             model.addAttribute("user", userOptional.get());
         } else {
-            return "redirect:/users";  // или на страницу с ошибкой
+            return "redirect:/users";
         }
 
         return "edit";
